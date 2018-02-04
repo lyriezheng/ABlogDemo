@@ -1,0 +1,2 @@
+module LoardsHelper
+end

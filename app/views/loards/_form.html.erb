@@ -1,0 +1,32 @@
+<%= form_with(model: loard, local: true) do |form| %>
+  <% if loard.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(loard.errors.count, "error") %> prohibited this loard from being saved:</h2>
+
+      <ul>
+      <% loard.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :loard_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bio %>
+    <%= form.text_area :bio, id: :loard_bio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birth %>
+    <%= form.date_select :birth, id: :loard_birth %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

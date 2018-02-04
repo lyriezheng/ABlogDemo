@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @loard.name %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @loard.bio %>
+</p>
+
+<p>
+  <strong>Birth:</strong>
+  <%= @loard.birth %>
+</p>
+
+<%= link_to 'Edit', edit_loard_path(@loard) %> |
+<%= link_to 'Back', loards_path %>

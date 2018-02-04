@@ -1,0 +1,2 @@
+class Loard < ApplicationRecord
+end
